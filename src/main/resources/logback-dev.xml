@@ -36,6 +36,6 @@
         <appender-ref ref="flatfile"/>
     </root>
 
-    <!--    <logger name="org.aery" level="DEBUG"/>-->
+    <logger name="org.aery" level="DEBUG"/>
 
 </configuration>
