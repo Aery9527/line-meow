@@ -4,6 +4,8 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import org.aery.line.meow.LineMeowProperties;
 import org.aery.line.meow.service.api.PersonalRequestLimiter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,8 @@ import java.util.function.Supplier;
 
 @Service
 public class PersonalRequestLimiterPreset implements PersonalRequestLimiter {
+
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
     private LineMeowProperties lineMeowProperties;
@@ -28,6 +32,8 @@ public class PersonalRequestLimiterPreset implements PersonalRequestLimiter {
                 .concurrencyLevel(10) // 設定併發級別為10
                 .recordStats() // 開啟快取統計
                 .build();
+
+        this.logger.info("requestLimitSecond : " + requestLimitSecond + "s");
     }
 
     @Override
