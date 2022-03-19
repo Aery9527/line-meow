@@ -2,4 +2,4 @@ spring:
   application:
     name: line-meow
   profiles:
-    active: dev, dev-line
+    active: heroku
