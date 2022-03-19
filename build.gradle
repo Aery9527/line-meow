@@ -15,9 +15,14 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'com.google.guava:guava:31.1-jre'
     implementation group: 'com.linecorp.bot', name: 'line-bot-spring-boot', version: '4.7.0'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    testImplementation group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 }
 
 test {
