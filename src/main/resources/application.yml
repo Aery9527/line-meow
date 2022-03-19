@@ -1,11 +1,5 @@
 spring:
   application:
     name: line-meow
-  output:
-    ansi:
-      enabled: ALWAYS
-
-line.bot:
-  channel-token: 'Put Your Channel Token Here.'
-  channel-secret: 'Put Your Channel Secret Here.'
-  handler.path: /callback
+  profiles:
+    active: dev, dev-line
