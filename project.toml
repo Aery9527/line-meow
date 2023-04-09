@@ -1,0 +1,7 @@
+#[[build.env]]
+#name = "GOOGLE_RUNTIME_VERSION"
+#value = "1.8"
+#[[build.env]]
+#name = "GOOGLE_ENTRYPOINT"
+#value = "java --jar /build/libs/line-meow.jar"
+#value = "java --enable-preview -jar /workspace/build/libs/app-0.1-all.jar"
