@@ -26,14 +26,14 @@ public class PersonalRequestLimiterPreset implements PersonalRequestLimiter {
 
     @PostConstruct
     public void initial() {
-        int requestLimitSecond = this.lineMeowProperties.getRequestLimitSecond();
+        int requestLimitMillisecond = this.lineMeowProperties.getRequestLimitMillisecond();
         this.cache = CacheBuilder.newBuilder()
-                .expireAfterWrite(requestLimitSecond, TimeUnit.SECONDS)
+                .expireAfterWrite(requestLimitMillisecond, TimeUnit.MILLISECONDS)
                 .concurrencyLevel(10) // 設定併發級別為10
                 .recordStats() // 開啟快取統計
                 .build();
 
-        this.logger.info("requestLimitSecond : " + requestLimitSecond + "s");
+        this.logger.info("requestLimitSecond : " + requestLimitMillisecond + "ms");
     }
 
     @Override

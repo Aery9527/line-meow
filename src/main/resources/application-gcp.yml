@@ -5,4 +5,4 @@ line.bot:
 #  handler.path: /callback
 
 line.meow:
-  request-limit-second: ${LINE_REQUEST_LIMIT_SECOND:5}
+  request-limit-millisecond: ${LINE_REQUEST_LIMIT_SECOND:5000}

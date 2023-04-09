@@ -7,13 +7,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class LineMeowProperties {
 
-    private int requestLimitSecond = 5;
+    private int requestLimitMillisecond = 5000;
 
-    public int getRequestLimitSecond() {
-        return requestLimitSecond;
+    public int getRequestLimitMillisecond() {
+        return requestLimitMillisecond;
     }
 
-    public void setRequestLimitSecond(int requestLimitSecond) {
-        this.requestLimitSecond = requestLimitSecond;
+    public void setRequestLimitMillisecond(int requestLimitMillisecond) {
+        this.requestLimitMillisecond = requestLimitMillisecond;
     }
+
 }
