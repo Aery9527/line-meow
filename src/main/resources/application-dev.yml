@@ -5,3 +5,11 @@ spring:
 
 logging:
   config: classpath:logback-dev.xml
+
+line.bot:
+  channel-token: 'Put Your Channel Token Here.'
+  channel-secret: 'Put Your Channel Secret Here.'
+#  handler.path: /callback
+
+line.meow:
+  request-limit-second: 3
