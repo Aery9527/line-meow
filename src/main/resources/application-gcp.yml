@@ -1,0 +1,9 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+
+line.bot:
+  channel-token: ${LINE_TOKEN}
+  channel-secret: ${LINE_SECRET}
+  request-limit-second: ${LINE_REQUEST_LIMIT_SECOND}
