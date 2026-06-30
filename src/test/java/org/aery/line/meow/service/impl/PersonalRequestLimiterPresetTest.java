@@ -11,13 +11,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.concurrent.atomic.AtomicReference;
 
 @SpringBootTest(properties = {
-        "line.meow.request-limit-second=" + PersonalRequestLimiterPresetTest.TEST_SECOND
+        "line.meow.request-limit-millisecond=" + PersonalRequestLimiterPresetTest.TEST_MILLISECONDS
 })
 class PersonalRequestLimiterPresetTest {
 
-    public static final int TEST_SECOND = 1;
-
-    public static final int TEST_MILLISECONDS = TEST_SECOND * 1000;
+    public static final int TEST_MILLISECONDS = 1000;
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
