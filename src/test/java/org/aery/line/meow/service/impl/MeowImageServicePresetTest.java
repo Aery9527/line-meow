@@ -2,7 +2,6 @@ package org.aery.line.meow.service.impl;
 
 import org.aery.line.meow.service.api.MeowImageService;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,6 @@ public class MeowImageServicePresetTest {
     private MeowImageService meowImageService;
 
     @Test
-    @EnabledIfEnvironmentVariable(named = "CAT_API_KEY", matches = ".+")
     public void randomUri() throws URISyntaxException {
         URI url = this.meowImageService.randomUri();
         this.logger.info(url.toString());
